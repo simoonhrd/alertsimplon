@@ -63,12 +63,13 @@ export default function form() {
     
     emailjs.send('service_3o8zzmk', 'template_1w6t0kn', 
     {
-        from_name : data.email,
+        from_firstname : data.firstName,
+        from_lastname : data.lastName,
+        from_address : data.address,
+        from_postalcode : data.postalCode,
+        from_city : data.lastName,
         to_name : "WebAppli AlertSimplon",
         message: data.description,
-        // adresse_event: markerPosition,
-        // nom: data.lastName,
-        // prenom: data.firstName,
     }
     , 'ELKMPGv8GC5Yj-3Nz')
     .then((result) => {
